@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import { Component, Fragment } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './components/pages/HomePage';
+import FooterPage from './components/partials/FooterPage';
+import HeaderPage from './components/partials/HeaderPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return(
+      <Fragment>
+        <HeaderPage/>
+          <BrowserRouter>
+            <Route path={'/'} exact strict component={HomePage} />
+          </BrowserRouter>
+        <FooterPage/>
+      </Fragment>
+    );
+  }
 }
 
 export default App;
