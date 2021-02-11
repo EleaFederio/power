@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import gsacLogo from "../../assets/img/gsac_logo.png";
 
 class HeaderPage extends Component{
     
@@ -9,7 +10,7 @@ class HeaderPage extends Component{
                 <Navbar collapseOnSelect expand="lg" fixed={'top'} variant="dark" style={{backgroundColor: '#2d2288'}}>
                 <Navbar.Brand href="#home">
                     <img
-                        src="https://gsac.coop/wp-content/uploads/2020/08/GSACLOGOW-1536x559.png"
+                        src={gsacLogo}
                         width="80"
                         height="40"
                         className="d-inline-block align-top"
